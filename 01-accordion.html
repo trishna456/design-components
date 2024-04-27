@@ -29,11 +29,89 @@
       body {
         font-family: "Inter", sans-serif;
         color: #343a40;
-        border-bottom: 8px solid #087f5b;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+      }
+
+      .item {
+      }
+
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        color: #087f5b;
+      }
+
+      .text {
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .hidden-box {
+      }
+
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        color: #868e96;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
       }
     </style>
   </head>
   <body>
-    <div class="accordion">Test</div>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">02</p>
+        <p class="text">How long do I have to return my chair?</p>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos nesciunt reiciendis earum ut, iste cumque blanditiis
+            nobis voluptatem? Incidunt esse aperiam ea, dolore libero
+            exercitationem nam minima laudantium repellendus itaque.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li>
+              Excepturi hic voluptas eos expedita exercitationem quae deleniti
+            </li>
+            <li>
+              possimus dolores odit dolor, similique amet. Omnis nemo pariatur
+            </li>
+            <li>itaque veritatis iste tempore nulla?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
