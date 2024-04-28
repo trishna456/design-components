@@ -30,11 +30,29 @@
         font-family: "Inter", sans-serif;
         color: #343a40;
         line-height: 1;
+      }
+
+      .pagination {
         display: flex;
         gap: 20px;
         align-items: center;
         justify-content: center;
         margin-top: 180px;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #000;
+      }
+
+      a:hover,
+      a:active,
+      .number.number-selected {
+        background-color: #087f5b;
+        color: #fff;
+        border: 1px solid #087f5b;
+        border-radius: 50%;
       }
 
       .number {
@@ -45,16 +63,10 @@
         justify-content: center;
       }
 
-      .number-selected {
-        background-color: #087f5b;
-        color: #fff;
-        border: 1px solid #087f5b;
-        border-radius: 50%;
-      }
-
       .arrow {
         height: 35px;
         width: 35px;
+        background-color: #fff;
         stroke: #087f5b;
         border: 1px solid #087f5b;
         border-radius: 50%;
@@ -63,46 +75,63 @@
         justify-content: center;
         align-items: center;
       }
+
+      .arrow:hover {
+        background-color: #087f5b;
+      }
+
+      .arrow:hover .arrow-left,
+      .arrow:hover .arrow-right {
+        stroke: #fff;
+      }
     </style>
   </head>
   <body>
-    <svg
-      class="arrow arrow-left"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M15.75 19.5 8.25 12l7.5-7.5"
-      />
-    </svg>
-    <div class="number">1</div>
-    <div class="number">2</div>
-    <div class="number number-selected">3</div>
-    <div class="number">4</div>
-    <div class="number">5</div>
-    <div class="number">6</div>
-    <div class="number">...</div>
-    <div class="number">23</div>
-    <svg
-      class="arrow arrow-right"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="m8.25 4.5 7.5 7.5-7.5 7.5"
-      />
-    </svg>
+    <div class="pagination">
+      <button class="arrow">
+        <svg
+          class="arrow-left"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+
+      <a href="#" class="number">1</a>
+      <a href="#" class="number">2</a>
+      <a href="#" class="number number-selected">3</a>
+      <a href="#" class="number">4</a>
+      <a href="#" class="number">5</a>
+      <a href="#" class="number">6</a>
+      <a href="#" class="number">...</a>
+      <a href="#" class="number">23</a>
+
+      <button class="arrow">
+        <svg
+          class="arrow-right"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
   </body>
 </html>
